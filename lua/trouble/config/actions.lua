@@ -75,6 +75,10 @@ local M = {
   next = function(self, ctx)
     self:move({ down = vim.v.count1, jump = ctx.opts.jump })
   end,
+  next_file = function(self, ctx)
+    local count = self:count()
+    print("count: " .. count)
+  end,
   -- Go to the previous item
   prev = function(self, ctx)
     self:move({ up = vim.v.count1, jump = ctx.opts.jump })
